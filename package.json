@@ -23,7 +23,9 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "heroku": "^7.47.12",
+    "json-server": "^0.16.3",
     "mongoose": "^5.11.15",
     "nodemon": "^2.0.7"
-  }
+  },
+  "devDependencies": {}
 }
