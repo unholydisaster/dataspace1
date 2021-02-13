@@ -11,6 +11,7 @@ app.use(bodyParser.json())
 //import Routes
 const postsRoutes = require('./routes/posts.js')
 
+const PORT=3000;
 app.use('/posts', postsRoutes)
 //routes
 app.get('/',(req,res)=>{
@@ -22,4 +23,4 @@ mongoose.connect(process.env.DB_CONNECTION,
  { useUnifiedTopology: true },
   ()=> console.log('connected'))
 //how do we start listening to the server
-app.listen('https://mydataspace.herokuapp.com')
+app.listen(PORT, () => console.log(`Server Running on port: http://localhost:${PORT}`));
