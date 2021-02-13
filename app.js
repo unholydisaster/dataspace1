@@ -9,9 +9,9 @@ require('dotenv/config')
 app.use(cors())
 app.use(bodyParser.json())
 //import Routes
-const postsRoute = require('./routes/posts')
+const postsRoutes = require('./routes/posts.js')
 
-app.use('/', postsRoute)
+app.use('/posts', postsRoutes)
 //routes
 app.get('/',(req,res)=>{
     res.send()
