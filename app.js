@@ -11,10 +11,10 @@ app.use(bodyParser.json())
 //import Routes
 const postsRoute = require('./routes/posts')
 
-app.use('/posts', postsRoute)
+app.use('/', postsRoute)
 //routes
 app.get('/',(req,res)=>{
-    res.send('we are on home')
+    res.send()
 })
  
 //connect to mongoose database
