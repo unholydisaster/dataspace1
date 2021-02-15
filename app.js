@@ -3,11 +3,11 @@ const app =express()
 const mongoose=require('mongoose')
 const bodyParser =require('body-parser')
 const cors =require('cors')
-require('dotenv/config')
+require('dotenv').config();
 
 //middlewares
-app.use(cors())
-app.use(bodyParser.json())
+app.use(express.json())
+app.use(express.urlencoded({extended:true}))
 //import Routes
 const postsRoutes = require('./routes/posts.js')
 
