@@ -16,9 +16,7 @@ router.get('/', async(req,res)=>{
 //submits a post
 router.post('/',async (req,res)=>{
    const post = new Post({
-       homeTeam:req.body.homeTeam,
-       awayTeam:req.body.awayTeam,
-       pick:req.body.pick
+       homeTeam:req.body.homeTeam,awayTeam:req.body.awayTeam,pick:req.body.pick
    })
    try{
        const savedPost= await post.save()
